@@ -1,0 +1,28 @@
+--- xevil-1.5.orig/Makefile	Mon Jun  3 22:47:02 1996
++++ xevil-1.5/Makefile	Thu Jun  7 17:19:50 2001
+@@ -8,7 +8,7 @@
+ #### Defines that are applicable to makes on all architectures
+ SHELL		=	/bin/sh
+ TARGETS		=	xevil #xshow
+-DEBUG_OPT	=	-O #-g#  #-DPRINT_ERRORS  
++DEBUG_OPT	=	-fno-for-scope $(OPTFLAGS)
+ LINK_OPT	=	-O
+ 
+ #SRC_DIR and WORK_DIR are only used for `make workdir`
+@@ -124,7 +124,7 @@
+ 
+ 
+ 
+-i386-linux:
++linux:
+ 	@$(MAKE) CC="g++" CFLAGS="-DUSE_RANDOM -DPROTECTED_IS_PUBLIC" \
+ INCL_DIRS="" LIBS_DIRS="-L/usr/X11R6/lib" LIBS="-lX11 -lm" $(TARGETS)
+ 
+@@ -163,7 +163,6 @@
+ #### Executables
+ xevil: $(OBJS)
+ 	$(CC) $(LINK_FLAGS) $(LINK_OPT) $(LIBS_DIRS) -o  xevil $(OBJS) $(LIBS)
+-	$(STRIP) xevil
+ 
+ # This is a simple program to show a bitmap and mask with arbitrary foreground
+ # and background colors.  I used it to test many of the bitmaps.  It is not
