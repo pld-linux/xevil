@@ -66,7 +66,7 @@ gzip -9nf readme.txt
 
 %{__install} %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Games
 
-%clean 
+%clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
