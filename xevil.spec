@@ -13,8 +13,7 @@ Version:	2.02
 Release:	3
 License:	GPL
 Group:		X11/Applications/Games
-#Source0:	http://www.xevil.com/stable/%{name}src%{version}.zip
-Source0:	%{name}src%{version}.zip
+Source0:	http://www.xevil.com/download/stable/%{name}src%{version}.zip
 # Source0-md5:	e1890f77144367e2e8bbf3609458b784
 Source1:	%{name}.desktop
 Source2:	%{name}.png
