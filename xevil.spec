@@ -4,7 +4,7 @@ Summary(da):	Et Pacman-lignende spil til X-vinduessystemet
 Summary(de):	Ein schnelles, extrem gewalttätiges Actionspiel für X
 Summary(fr):	Un jeu d'action rapide et très violent sous X
 Summary(it):	Un violento gioco di azione per X Window
-Summary(no):	Et hurtig voldelig spill for X-vindussytemet
+Summary(nb):	Et hurtig voldelig spill for X-vindussytemet
 Summary(pl):	Brutalna gra o szybkiej akcji pod X Window System
 Summary(sk):	Rýchla násilná hra pre X Window Systém
 Summary(tr):	Hýzlý ve þiddet yüklü bir X oyunu
