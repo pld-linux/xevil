@@ -13,6 +13,7 @@ Source1:	%{name}.desktop
 Patch0:		%{name}-config.patch
 Patch1:		%{name}-c++.patch
 Patch2:		%{name}-gcc3.patch
+Patch3:		%{name}-const_float.patch
 URL:		http://www.xevil.com/
 BuildRequires:	unzip
 BuildRequires:	XFree86-devel >= 4.0
@@ -50,6 +51,7 @@ Ninja savaþçýsý olarak karþýnýza çýkan her þeyi öldürmek.
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
+%patch3 -p1
 
 %build
 %{__make} HOSTTYPE=i386 \
