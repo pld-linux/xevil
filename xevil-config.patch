@@ -1,28 +1,20 @@
---- xevil-1.5.orig/Makefile	Mon Jun  3 22:47:02 1996
-+++ xevil-1.5/Makefile	Thu Jun  7 17:19:50 2001
-@@ -8,7 +8,7 @@
- #### Defines that are applicable to makes on all architectures
- SHELL		=	/bin/sh
- TARGETS		=	xevil #xshow
--DEBUG_OPT	=	-O #-g#  #-DPRINT_ERRORS  
-+DEBUG_OPT	=	-fno-for-scope $(OPTFLAGS)
- LINK_OPT	=	-O
+--- xevil-2.02.orig/makefile	Wed Jan 19 13:08:50 2000
++++ xevil-2.02/makefile	Mon Jul  2 20:13:37 2001
+@@ -59,7 +59,6 @@
+ 	cd $(DEPTH)/cmn; $(MAKE)
+ 	cd $(DEPTH)/x11; $(MAKE)
+ 	$(CC) $(LINK_FLAGS) $(LINK_OPT) $(LIBS_DIRS) -o $(OBJ_DIR)/xevil $(ALL_OBJS) $(LIBS)
+-	$(STRIP) $(OBJ_DIR)/xevil
  
- #SRC_DIR and WORK_DIR are only used for `make workdir`
-@@ -124,7 +124,7 @@
- 
- 
- 
--i386-linux:
-+linux:
- 	@$(MAKE) CC="g++" CFLAGS="-DUSE_RANDOM -DPROTECTED_IS_PUBLIC" \
- INCL_DIRS="" LIBS_DIRS="-L/usr/X11R6/lib" LIBS="-lX11 -lm" $(TARGETS)
- 
-@@ -163,7 +163,6 @@
- #### Executables
- xevil: $(OBJS)
- 	$(CC) $(LINK_FLAGS) $(LINK_OPT) $(LIBS_DIRS) -o  xevil $(OBJS) $(LIBS)
--	$(STRIP) xevil
- 
- # This is a simple program to show a bitmap and mask with arbitrary foreground
- # and background colors.  I used it to test many of the bitmaps.  It is not
+ # Could also include serverping in the distribution
+ $(OBJ_DIR)/xevil$(VERSION).$(PCKG_NAME).tar.Z::
+--- xevil-2.02.orig/config.mk	Wed Jan 19 14:19:04 2000
++++ xevil-2.02/config.mk	Mon Jul  2 21:55:29 2001
+@@ -231,7 +231,6 @@
+ i386:
+ 	@$(MAKE) CC="g++" \
+ CFLAGS="-DUSE_RANDOM -DXEVIL_KEYSET=UIlinux -DUSE_UINT_NET_LENGTH" \
+-LINK_FLAGS="-static" \
+ INCL_DIRS="-I/usr/X11R6/include" \
+ LIBS_DIRS="-L/usr/X11R6/lib" \
+ LIBS="-lXpm -lX11 -lm" \
