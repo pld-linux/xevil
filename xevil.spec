@@ -5,13 +5,14 @@ Summary(pl):	Brutalna gra o szybkiej akcji pod X Window System
 Summary(tr):	Hýzlý ve þiddet yüklü bir X oyunu
 Name:		xevil
 Version:	2.02
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Applications/Games
 Source0:	ftp://ftp.xevil.com/stable/%{name}src%{version}.zip
 Source1:	%{name}.desktop
 Patch0:		%{name}-config.patch
 Patch1:		%{name}-c++.patch
+Patch2:		%{name}-gcc3.patch
 URL:		http://www.xevil.com/
 BuildRequires:	unzip
 BuildRequires:	XFree86-devel >= 4.0
@@ -45,15 +46,14 @@ X-Windows altýnda oynanan bir action/macera oyunu. Sizin rolünüz, bir
 Ninja savaþçýsý olarak karþýnýza çýkan her þeyi öldürmek.
 
 %prep
-%setup -q -T -c
-unzip -q %{SOURCE0}
-
+%setup -q -c
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
 
 %build
 %{__make} HOSTTYPE=i386 \
-	DEBUG_OPT="%{rpmcflags} -fno-exceptions -fno-rtti" \
+	DEBUG_OPT="%{rpmcflags} -fno-exceptions" \
 	LINK_FLAGS="%{rpmldflags}"
 
 %install
@@ -62,8 +62,6 @@ install -d $RPM_BUILD_ROOT{%{_bindir},%{_applnkdir}/Games}
 
 install x11/REDHAT_LINUX/xevil $RPM_BUILD_ROOT%{_bindir}
 
-gzip -9nf readme.txt
-
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Games
 
 %clean
@@ -71,6 +69,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz instructions
+%doc readme.txt instructions
 %attr(755,root,root) %{_bindir}/xevil
 %{_applnkdir}/Games/*
