@@ -8,8 +8,6 @@ Version:	2.02
 Release:	1
 License:	GPL
 Group:		X11/Applications/Games
-Group(de):	X11/Applikationen/Spiele
-Group(pl):	X11/Aplikacje/Gry
 Source0:	ftp://ftp.xevil.com/stable/%{name}src%{version}.zip
 Source1:	%{name}.desktop
 Patch0:		%{name}-config.patch
