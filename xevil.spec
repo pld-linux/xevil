@@ -54,7 +54,9 @@ unzip -q %{SOURCE0}
 %patch1 -p1
 
 %build
-%{__make} HOSTTYPE=i386 DEBUG_OPT="%{rpmcflags}" LINK_FLAGS="%{rpmldflags}"
+%{__make} HOSTTYPE=i386 \
+	DEBUG_OPT="%{rpmcflags} -fno-exceptions -fno-rtti" \
+	LINK_FLAGS="%{rpmldflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
