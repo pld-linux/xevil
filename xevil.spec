@@ -10,7 +10,7 @@ Summary(sk):	Rýchla násilná hra pre X Window Systém
 Summary(tr):	Hýzlý ve þiddet yüklü bir X oyunu
 Name:		xevil
 Version:	2.02r2
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Applications/Games
 Source0:	http://www.xevil.com/download/stable/%{name}src%{version}.zip
@@ -23,6 +23,7 @@ Patch2:		%{name}-const_float.patch
 URL:		http://www.xevil.com/
 BuildRequires:	XFree86-devel >= 4.0
 BuildRequires:	libstdc++-devel
+BuildRequires:	sed >= 4.0
 BuildRequires:	unzip
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -79,6 +80,8 @@ cat > cmn/strstream.h <<EOF
 #include <strstream>
 using namespace std;
 EOF
+
+sed -i -e 's@-L/usr/X11R6/lib@-L/usr/X11R6/%{_lib}@' config.mk
 
 %build
 %{__make} \
