@@ -9,23 +9,21 @@ Summary(pl):	Brutalna gra o szybkiej akcji pod X Window System
 Summary(sk):	Rýchla násilná hra pre X Window Systém
 Summary(tr):	Hýzlý ve þiddet yüklü bir X oyunu
 Name:		xevil
-Version:	2.02
-Release:	3
+Version:	2.02r2
+Release:	1
 License:	GPL
 Group:		X11/Applications/Games
 Source0:	http://www.xevil.com/download/stable/%{name}src%{version}.zip
-# Source0-md5:	e1890f77144367e2e8bbf3609458b784
+# Source0-md5:	09a9ef720b7204b0be68c4f462def370
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 Patch0:		%{name}-config.patch
-Patch1:		%{name}-c++.patch
-Patch2:		%{name}-gcc3.patch
-Patch3:		%{name}-const_float.patch
+Patch1:		%{name}-gcc3.patch
+Patch2:		%{name}-const_float.patch
 URL:		http://www.xevil.com/
-BuildRequires:	unzip
 BuildRequires:	XFree86-devel >= 4.0
 BuildRequires:	libstdc++-devel
-BuildRequires:	/usr/bin/compress
+BuildRequires:	unzip
 Buildroot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
@@ -78,10 +76,16 @@ Ninja savaþçýsý olarak karþýnýza çýkan her þeyi öldürmek.
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
-%patch3 -p1
+
+# no <strstream.h> compat in gcc 3.3
+cat > cmn/strstream.h <<EOF
+#include <strstream>
+using namespace std;
+EOF
 
 %build
-%{__make} HOSTTYPE=i386 \
+%{__make} \
+	HOSTTYPE=i386 \
 	DEBUG_OPT="%{rpmcflags} -fno-exceptions" \
 	LINK_FLAGS="%{rpmldflags}"
 

@@ -1,42 +1,11 @@
---- xevil-2.02/cmn/locator.h.orig	Wed Jan 19 12:54:10 2000
-+++ xevil-2.02/cmn/locator.h	Sun Oct 13 12:06:18 2002
-@@ -48,6 +48,7 @@
+--- xevil-2.02r2/cmn/physical.h.orig	2000-01-19 12:54:08.000000000 +0100
++++ xevil-2.02r2/cmn/physical.h	2003-06-30 22:00:04.000000000 +0200
+@@ -93,7 +93,7 @@
+    CLASSNAME::CLASSNAME(InStreamP in,const CLASSNAME ## Context &cx, \
+                          CLASSNAME ## Xdata &x_data, \
+                          WorldP w,LocatorP l) \
+-   : PARENT(in,cx. ## parent ## Context,x_data,w,l) 
++   : PARENT(in,cx. parent ## Context,x_data,w,l) 
  
- // Include Files
- #include <iostream.h>
-+#include <algo.h>
- 
- #include "utils.h"
- #include "coord.h"
---- xevil-2.02/x11/panel.cpp.orig	Wed Jan 19 12:54:16 2000
-+++ xevil-2.02/x11/panel.cpp	Sun Oct 13 12:33:25 2002
-@@ -32,6 +32,7 @@
- #include <X11/keysym.h>
- }
- #include <strstream.h>
-+#include <iostream.h>
- 
- #include "utils.h"
- #include "xdata.h"
---- xevil-2.02/x11/main.cpp.orig	Wed Jan 19 20:52:40 2000
-+++ xevil-2.02/x11/main.cpp	Sun Oct 13 12:35:05 2002
-@@ -64,7 +64,7 @@
- // main's job is very simple.
- // Create the Game, then run the outer loop, one iteration per turn.
- // Empty the event queue and feed it to Game every turn.
--void main(int argc, char **argv) {
-+int main(int argc, char **argv) {
-   Utils::seed_random();
- 
-   GameP game = new Game(&argc,argv);
---- xevil-2.02/x11/serverping.cpp.orig	Wed Jan 19 12:54:16 2000
-+++ xevil-2.02/x11/serverping.cpp	Sun Oct 13 12:35:52 2002
-@@ -31,7 +31,7 @@
- #include "neth.h"
- #include "id.h"
- #include <strstream.h>
--
-+#include <iostream.h>
- 
- 
- class ServerPing {
+ // Used by internal nodes and leaves.
+ #define DEFINE_UPDATE_FROM_STREAM(CLASSNAME,PARENT) \
