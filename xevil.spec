@@ -19,6 +19,7 @@ URL:		http://www.xevil.com/
 BuildRequires:	unzip
 BuildRequires:	XFree86-devel >= 4.0
 BuildRequires:	libstdc++-devel
+BuildRequires:	/usr/bin/compress
 Buildroot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
@@ -61,8 +62,7 @@ Ninja savaþçýsý olarak karþýnýza çýkan her þeyi öldürmek.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d
-$RPM_BUILD_ROOT{%{_bindir},%{_applnkdir}/Games/Arcade,%{_pixmapsdir}}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_applnkdir}/Games/Arcade,%{_pixmapsdir}}
 
 install x11/REDHAT_LINUX/xevil $RPM_BUILD_ROOT%{_bindir}
 
