@@ -1,9 +1,9 @@
 [Desktop Entry]
-Name=xevil
+Name=Xevil
 Comment=A fast-action violent game for the X Window System
 Comment[de]=Ein schnelles, extrem gewalttätiges Actionspiel für X
 Comment[fr]=Un jeu d'action rapide et très violent sous X
-Comment[pl]=Brutalna gra o szybkiej akcji pod X Window System
+Comment[pl]=Brutalna gra o szybkiej akcji pod System X Window
 Comment[tr]=Hızlı ve şiddet yüklü bir X oyunu
 Exec=xevil
 Terminal=0
