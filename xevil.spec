@@ -26,9 +26,6 @@ BuildRequires:	libstdc++-devel
 BuildRequires:	unzip
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_prefix		/usr/X11R6
-%define		_mandir		%{_prefix}/man
-
 %description
 XEvil is an X Window System based game with a side view display
 reminiscent of LodeRunner. The object of the game is to run around
@@ -91,11 +88,11 @@ EOF
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_applnkdir}/Games/Arcade,%{_pixmapsdir}}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_desktopdir},%{_pixmapsdir}}
 
 install x11/REDHAT_LINUX/xevil $RPM_BUILD_ROOT%{_bindir}
 
-install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Games/Arcade
+install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
 install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
 
 %clean
@@ -105,5 +102,5 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc readme.txt instructions
 %attr(755,root,root) %{_bindir}/xevil
-%{_applnkdir}/Games/Arcade/*
+%{_desktopdir}/*.desktop
 %{_pixmapsdir}/*.png
