@@ -41,7 +41,7 @@ tuez tout ce que vous voyez et essayez de survivre.
 
 %description -l pl
 xevil jest gr± pod X Window System bazuj±c± na LodeRunnerze. Celem gry
-jest zabijanie wszystkiego w zasiêgu wzroku oraz przedzenie kolejnych
+jest zabijanie wszystkiego w zasiêgu wzroku oraz przechodzenie kolejnych
 poziomów. W xevil mo¿na graæ przeciwko komputerowi albo innym graczom.
 
 %description -l tr
