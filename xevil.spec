@@ -24,7 +24,7 @@ URL:		http://www.xevil.com/
 BuildRequires:	XFree86-devel >= 4.0
 BuildRequires:	libstdc++-devel
 BuildRequires:	unzip
-Buildroot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
 %define		_mandir		%{_prefix}/man
