@@ -5,11 +5,12 @@ Summary(pl):	Brutalna gra o szybkiej akcji pod X Window System
 Summary(tr):	Hýzlý ve þiddet yüklü bir X oyunu
 Name:		xevil
 Version:	2.02
-Release:	2
+Release:	3
 License:	GPL
 Group:		X11/Applications/Games
 Source0:	ftp://ftp.xevil.com/stable/%{name}src%{version}.zip
 Source1:	%{name}.desktop
+Source2:	%{name}.png
 Patch0:		%{name}-config.patch
 Patch1:		%{name}-c++.patch
 Patch2:		%{name}-gcc3.patch
@@ -60,11 +61,13 @@ Ninja savaþçýsý olarak karþýnýza çýkan her þeyi öldürmek.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_applnkdir}/Games}
+install -d
+$RPM_BUILD_ROOT{%{_bindir},%{_applnkdir}/Games/Arcade,%{_pixmapsdir}}
 
 install x11/REDHAT_LINUX/xevil $RPM_BUILD_ROOT%{_bindir}
 
-install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Games
+install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Games/Arcade
+install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -73,4 +76,5 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc readme.txt instructions
 %attr(755,root,root) %{_bindir}/xevil
-%{_applnkdir}/Games/*
+%{_applnkdir}/Games/Arcade/*
+%{_pixmapsdir}/*.png
