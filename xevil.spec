@@ -68,7 +68,7 @@ dohµade a skúma» rozlièné úrovne. XEvil mô¾e by» hraný proti poèítaèu,
 alebo proti iným hráèom.
 
 %description -l tr
-X-Windows altýnda oynanan bir action/macera oyunu. Sizin rolünüz, bir
+X Window altýnda oynanan bir action/macera oyunu. Sizin rolünüz, bir
 Ninja savaþçýsý olarak karþýnýza çýkan her þeyi öldürmek.
 
 %prep
