@@ -58,13 +58,13 @@ unzip -q %{SOURCE0}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%{__install} -d $RPM_BUILD_ROOT{%{_bindir},%{_applnkdir}/Games}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_applnkdir}/Games}
 
-%{__install} x11/REDHAT_LINUX/xevil $RPM_BUILD_ROOT%{_bindir}
+install x11/REDHAT_LINUX/xevil $RPM_BUILD_ROOT%{_bindir}
 
 gzip -9nf readme.txt
 
-%{__install} %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Games
+install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Games
 
 %clean
 rm -rf $RPM_BUILD_ROOT
