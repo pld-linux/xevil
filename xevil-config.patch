@@ -10,11 +10,11 @@
  $(OBJ_DIR)/xevil$(VERSION).$(PCKG_NAME).tar.Z::
 --- xevil-2.02.orig/config.mk	Wed Jan 19 14:19:04 2000
 +++ xevil-2.02/config.mk	Mon Jul  2 21:55:29 2001
-@@ -231,7 +231,6 @@
+@@ -231,7 +231,4 @@
  i386:
  	@$(MAKE) CC="g++" \
  CFLAGS="-DUSE_RANDOM -DXEVIL_KEYSET=UIlinux -DUSE_UINT_NET_LENGTH" \
 -LINK_FLAGS="-static" \
- INCL_DIRS="-I/usr/X11R6/include" \
- LIBS_DIRS="-L/usr/X11R6/lib" \
+-INCL_DIRS="-I/usr/X11R6/include" \
+-LIBS_DIRS="-L/usr/X11R6/lib" \
  LIBS="-lXpm -lX11 -lm" \
