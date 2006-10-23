@@ -10,7 +10,7 @@ Summary(sk):	Rýchla násilná hra pre X Window Systém
 Summary(tr):	Hýzlý ve þiddet yüklü bir X oyunu
 Name:		xevil
 Version:	2.02r2
-Release:	2
+Release:	3
 License:	GPL
 Group:		X11/Applications/Games
 Source0:	http://www.xevil.com/download/stable/%{name}src%{version}.zip
@@ -20,11 +20,12 @@ Source2:	%{name}.png
 Patch0:		%{name}-config.patch
 Patch1:		%{name}-gcc3.patch
 Patch2:		%{name}-const_float.patch
+Patch3:		%{name}-c++.patch
 URL:		http://www.xevil.com/
-BuildRequires:	XFree86-devel >= 4.0
 BuildRequires:	libstdc++-devel
-BuildRequires:	sed >= 4.0
 BuildRequires:	unzip
+BuildRequires:	xorg-lib-libX11-devel
+BuildRequires:	xorg-lib-libXpm-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -74,14 +75,13 @@ Ninja savaþçýsý olarak karþýnýza çýkan her þeyi öldürmek.
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
+%patch3 -p1
 
 # no <strstream.h> compat in gcc 3.3
 cat > cmn/strstream.h <<EOF
 #include <strstream>
 using namespace std;
 EOF
-
-sed -i -e 's@-L/usr/X11R6/lib@-L/usr/X11R6/%{_lib}@' config.mk
 
 %build
 %{__make} \
