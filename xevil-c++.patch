@@ -1,0 +1,24 @@
+--- xevil-2.02r2/cmn/locator.h.orig	2003-03-22 20:35:30.000000000 +0100
++++ xevil-2.02r2/cmn/locator.h	2006-10-23 17:24:39.096095500 +0200
+@@ -96,6 +96,10 @@
+ #define OL_RECENT_SOUNDS_MAX 30
+ 
+ 
++class OLgridEntry;
++#if X11
++class OLshadowEntry;
++#endif
+ 
+ // An entry for one object in the list of all objects currently in the game.
+ class OLentry {
+--- xevil-2.02r2/cmn/utils.cpp.orig	2003-03-19 10:05:12.000000000 +0100
++++ xevil-2.02r2/cmn/utils.cpp	2006-10-23 17:25:05.153724000 +0200
+@@ -761,7 +761,7 @@
+ 
+ 
+ private:
+-  Bucket* HashTable::_get(int &index,void* key);
++  Bucket* _get(int &index,void* key);
+   /* MODIFIES: index */
+   /* EFFECTS: Internal helper function.  Return the Bucket containing key
+      or NULL if not found.  Set index to the bucket list for key whether
