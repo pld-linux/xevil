@@ -1,13 +1,13 @@
 Summary:	A fast-action violent game for the X Window System
-Summary(cs.UTF-8):   Hra podobná hře Pac-Man pro X Window System
-Summary(da.UTF-8):   Et Pacman-lignende spil til X-vinduessystemet
-Summary(de.UTF-8):   Ein schnelles, extrem gewalttätiges Actionspiel für X
-Summary(fr.UTF-8):   Un jeu d'action rapide et très violent sous X
-Summary(it.UTF-8):   Un violento gioco di azione per X Window
-Summary(nb.UTF-8):   Et hurtig voldelig spill for X-vindussytemet
-Summary(pl.UTF-8):   Brutalna gra o szybkiej akcji pod X Window System
-Summary(sk.UTF-8):   Rýchla násilná hra pre X Window Systém
-Summary(tr.UTF-8):   Hızlı ve şiddet yüklü bir X oyunu
+Summary(cs.UTF-8):	Hra podobná hře Pac-Man pro X Window System
+Summary(da.UTF-8):	Et Pacman-lignende spil til X-vinduessystemet
+Summary(de.UTF-8):	Ein schnelles, extrem gewalttätiges Actionspiel für X
+Summary(fr.UTF-8):	Un jeu d'action rapide et très violent sous X
+Summary(it.UTF-8):	Un violento gioco di azione per X Window
+Summary(nb.UTF-8):	Et hurtig voldelig spill for X-vindussytemet
+Summary(pl.UTF-8):	Brutalna gra o szybkiej akcji pod X Window System
+Summary(sk.UTF-8):	Rýchla násilná hra pre X Window Systém
+Summary(tr.UTF-8):	Hızlı ve şiddet yüklü bir X oyunu
 Name:		xevil
 Version:	2.02r2
 Release:	3
