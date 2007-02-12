@@ -1,13 +1,13 @@
 Summary:	A fast-action violent game for the X Window System
-Summary(cs):	Hra podobná høe Pac-Man pro X Window System
-Summary(da):	Et Pacman-lignende spil til X-vinduessystemet
-Summary(de):	Ein schnelles, extrem gewalttätiges Actionspiel für X
-Summary(fr):	Un jeu d'action rapide et très violent sous X
-Summary(it):	Un violento gioco di azione per X Window
-Summary(nb):	Et hurtig voldelig spill for X-vindussytemet
-Summary(pl):	Brutalna gra o szybkiej akcji pod X Window System
-Summary(sk):	Rıchla násilná hra pre X Window Systém
-Summary(tr):	Hızlı ve şiddet yüklü bir X oyunu
+Summary(cs.UTF-8):   Hra podobnÃ¡ hÅ™e Pac-Man pro X Window System
+Summary(da.UTF-8):   Et Pacman-lignende spil til X-vinduessystemet
+Summary(de.UTF-8):   Ein schnelles, extrem gewalttÃ¤tiges Actionspiel fÃ¼r X
+Summary(fr.UTF-8):   Un jeu d'action rapide et trÃ¨s violent sous X
+Summary(it.UTF-8):   Un violento gioco di azione per X Window
+Summary(nb.UTF-8):   Et hurtig voldelig spill for X-vindussytemet
+Summary(pl.UTF-8):   Brutalna gra o szybkiej akcji pod X Window System
+Summary(sk.UTF-8):   RÃ½chla nÃ¡silnÃ¡ hra pre X Window SystÃ©m
+Summary(tr.UTF-8):   HÄ±zlÄ± ve ÅŸiddet yÃ¼klÃ¼ bir X oyunu
 Name:		xevil
 Version:	2.02r2
 Release:	3
@@ -34,41 +34,41 @@ reminiscent of LodeRunner. The object of the game is to run around
 killing everything in sight and exploring the different levels. XEvil
 can be played against the computer or against other people.
 
-%description -l cs
-XEvil je hra pro X Window System s podobnım boèním pohledem na hru
-pøipomínající hru LodeRunner. Cílem hry je projít celou úroveò a zabít
-v¹echno v dohledu a dostat se do dal¹í úrovnì. XEvil mù¾ete hrát proti
-poèítaèi nebo proti jinım hráèùm.
+%description -l cs.UTF-8
+XEvil je hra pro X Window System s podobnÃ½m boÄnÃ­m pohledem na hru
+pÅ™ipomÃ­najÃ­cÃ­ hru LodeRunner. CÃ­lem hry je projÃ­t celou ÃºroveÅˆ a zabÃ­t
+vÅ¡echno v dohledu a dostat se do dalÅ¡Ã­ ÃºrovnÄ›. XEvil mÅ¯Å¾ete hrÃ¡t proti
+poÄÃ­taÄi nebo proti jinÃ½m hrÃ¡ÄÅ¯m.
 
-%description -l de
-Ein Action/Adventure-Spiel für X Window, in dem Sie als Ninja alles
-niedermachen und dann die Gegend erkunden - wenn Sie überleben.
+%description -l de.UTF-8
+Ein Action/Adventure-Spiel fÃ¼r X Window, in dem Sie als Ninja alles
+niedermachen und dann die Gegend erkunden - wenn Sie Ã¼berleben.
 
-%description -l fr
-XEvil est un jeu sous X Window avec une vue de côté à la Lode Runner.
-Il faut explorer les différents niveaux en tuant tout ce qui bouge. On
-peut jouer contre un autre être humain ou contre l'ordinateur.
+%description -l fr.UTF-8
+XEvil est un jeu sous X Window avec une vue de cÃ´tÃ© Ã  la Lode Runner.
+Il faut explorer les diffÃ©rents niveaux en tuant tout ce qui bouge. On
+peut jouer contre un autre Ãªtre humain ou contre l'ordinateur.
 
-%description -l it
+%description -l it.UTF-8
 Un gioco per X11 con una vista dall'utente stile LodeRunner.
 L'obbiettivo del gioco e' quello di andare in giro ed uccidere tutti
 esplorando i vari livelli.
 
-%description -l pl
-xevil jest gr± pod X Window System bazuj±c± na LodeRunnerze. Celem gry
-jest zabijanie wszystkiego w zasiêgu wzroku oraz przechodzenie
-kolejnych poziomów. W xevil mo¿na graæ przeciwko komputerowi albo
+%description -l pl.UTF-8
+xevil jest grÄ… pod X Window System bazujÄ…cÄ… na LodeRunnerze. Celem gry
+jest zabijanie wszystkiego w zasiÄ™gu wzroku oraz przechodzenie
+kolejnych poziomÃ³w. W xevil moÅ¼na graÄ‡ przeciwko komputerowi albo
 innym graczom.
 
-%description -l sk
-XEvil je hra pre X Window systém s boènım pohµadom, pripomínajúca
-LodeRunner. Cieµom hry je pohybova» sa po hre, zabíja» v¹etko v
-dohµade a skúma» rozlièné úrovne. XEvil mô¾e by» hranı proti poèítaèu,
-alebo proti inım hráèom.
+%description -l sk.UTF-8
+XEvil je hra pre X Window systÃ©m s boÄnÃ½m pohÄ¾adom, pripomÃ­najÃºca
+LodeRunner. CieÄ¾om hry je pohybovaÅ¥ sa po hre, zabÃ­jaÅ¥ vÅ¡etko v
+dohÄ¾ade a skÃºmaÅ¥ rozliÄnÃ© Ãºrovne. XEvil mÃ´Å¾e byÅ¥ hranÃ½ proti poÄÃ­taÄu,
+alebo proti inÃ½m hrÃ¡Äom.
 
-%description -l tr
-X Window altında oynanan bir action/macera oyunu. Sizin rolünüz, bir
-Ninja savaşçısı olarak karşınıza çıkan her şeyi öldürmek.
+%description -l tr.UTF-8
+X Window altÄ±nda oynanan bir action/macera oyunu. Sizin rolÃ¼nÃ¼z, bir
+Ninja savaÅŸÃ§Ä±sÄ± olarak karÅŸÄ±nÄ±za Ã§Ä±kan her ÅŸeyi Ã¶ldÃ¼rmek.
 
 %prep
 %setup -q -c
